@@ -54,5 +54,26 @@ public class OrderDB {
 		}
 	}
 	
+	public ArrayList<OrderObject> getAllOrders(){
+		Connection con = null;
+		String q = "select * from orders";
+		ArrayList<OrderObject> order = new ArrayList<OrderObject>();
+		try {
+			con = DbConnection.connect();
+			PreparedStatement ps = con.prepareStatement(q);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				System.out.println("hd" + rs.getString(2));
+				OrderObject obj = new OrderObject(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4));
+				System.out.println("h" + obj);
+				order.add(obj);
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return order;
+	}
+	
 	
 }

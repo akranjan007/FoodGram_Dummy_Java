@@ -46,6 +46,14 @@
   	<url-pattern>/login</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>logout</servlet-name>
+  	<servlet-class>com.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>logout</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
   
    <servlet>
   	<servlet-name>registerUser</servlet-name>
@@ -57,12 +65,12 @@
   </servlet-mapping>
   
   <servlet>
-  	<servlet-name>logout</servlet-name>
-  	<servlet-class>com.servlet.LogoutServlet</servlet-class>
+  	<servlet-name>adminPanel</servlet-name>
+  	<servlet-class>com.servlet.AdminServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>logout</servlet-name>
-  	<url-pattern>/logout</url-pattern>
+  	<servlet-name>adminPanel</servlet-name>
+  	<url-pattern>/admin</url-pattern>
   </servlet-mapping>
   
 </web-app>

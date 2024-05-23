@@ -29,7 +29,7 @@
                     		String role = user.getRole();
                     		if(role.equals("admin")){
                     			%>
-                    			<li><a href="admin.jsp">Admin</a></li>
+                    			<li><a href="admin">Admin</a></li>
                     			<li><a href="logout">Log Out</a></li>
                     			<%
                     		}

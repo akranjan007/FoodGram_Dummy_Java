@@ -29,7 +29,7 @@
                     		String role = user.getRole();
                     		if(role.equals("admin")){
                     			%>
-                    			<li><a href="admin.jsp">Admin</a></li>
+                    			<li><a href="admin">Admin</a></li>
                     			<li><a href="logout">Log Out</a></li>
                     			<%
                     		}
@@ -49,14 +49,29 @@
     <%
         if(session==null || session.getAttribute("user")==null){
         %>
-          <form method="post" action="bill">
-		    	<label>
-		    		<p>Name</p> 
-		    		<input type="text" name="name" placeholder="Enter Yout Name"/>
-		    		</br>
-		    		<input type="submit" value="Generate Bill"/>
-		    	</label>
-		    </form>
+        <section class="checkout">
+    <div class="container">
+        <h2>Checkout</h2>
+        <form method="post" action="bill">
+            <table>
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="name" placeholder="Enter Your Name" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Generate Bill" class="btn btn-primary"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</section>
+
         <%
          }
         else{

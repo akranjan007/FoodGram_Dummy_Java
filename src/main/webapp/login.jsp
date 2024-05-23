@@ -36,7 +36,7 @@
                     		}
                     		else{
                     			%>
-                    			<li><a href="index.jsp">Profile</a></li>
+                    			<li><a href="index">Profile</a></li>
                     			<li><a href="logout">Log Out</a></li>
                     			<%
                     		}
